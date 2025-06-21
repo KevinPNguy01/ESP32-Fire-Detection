@@ -5,12 +5,21 @@ A real-time fire detection system using an ESP32 camera module and a Jetson Nano
 ## System Overview
 1. **ESP32** streams video data over WiFi and reads sensor data.
 2. **Jetson Nano** discovers the ESP32 (via mDNS or manual IP), receives the video stream, and runs YOLO-based fire detection.
-3. If fire is detected (from video and confirmed by IR sensor), the system can trigger alerts or further actions.
+3. **Diyables IR Sensor** is used to confirm fire detection by measuring infrared radiation.
+4. If fire is detected (from video and confirmed by IR sensor), the system can trigger alerts or further actions.
+
 
 ### Project Structure
 - `esp32/` — Firmware and configuration for the ESP32 camera module
 - `jetson/` — Python code for fire detection and ESP32 discovery on Jetson Nano
 - `yolov8/` — YOLO training, datasets, and demo notebooks
+
+### Wiring Diagram
+![Wiring Diagram](images/wiring_diagram.png "Wiring Diagram")
+
+### Demo (Serial Monitor and Video Output)
+![Fire Detected](images/fire_detected.png "Fire Detected")
+![No Fire Detected](images/no_fire_detected.png "No Fire Detected")
 
 ## ESP32 Camera Module
 
@@ -19,7 +28,7 @@ This folder contains the firmware and configuration files for running fire detec
 ### Contents
 - `esp32.ino` — Main Arduino sketch for running fire detection on the ESP32 camera module.
 - `CameraWebServer.ino` — Web server code for streaming video from the ESP32 camera.
-- `Sensors.ino` — Contains sensor setup and reading logic.
+- `Sensors.ino` — Sensor setup and reading logic.
 - `app_httpd.cpp` — HTTP server implementation for handling video streaming and requests.
 - `config.h` — Configuration file for WiFi credentials and sensor settings.
 
