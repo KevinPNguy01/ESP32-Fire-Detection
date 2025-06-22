@@ -108,12 +108,11 @@ Real-time fire and smoke detection using YOLOv8. Trained on multiple aggregated 
 ### Datasets Used
 The following datasets were aggregated and relabelled for training the YOLOv8 model:
 
+- [YOLOv8-Fire-and-Smoke-Detection](https://github.com/Abonia1/YOLOv8-Fire-and-Smoke-Detection) – Small dataset for fire and smoke  
 
-[YOLOv8-Fire-and-Smoke-Detection](https://github.com/Abonia1/YOLOv8-Fire-and-Smoke-Detection) (Small dataset for fire and smoke)
+- [DFireDataset](https://github.com/gaiasd/DFireDataset) – Large dataset for fire and smoke (Released under CC0 1.0 Universal)  
 
-[DFireDataset](https://github.com/gaiasd/DFireDataset) (Large dataset for fire and smoke)
-
-[yolov5-fire-detection](https://github.com/spacewalk01/yolov5-fire-detection) (Medium dataset for fire only)
+- [yolov5-fire-detection](https://github.com/spacewalk01/yolov5-fire-detection) – Medium dataset for fire only (Licensed under the MIT License)
 
 ### Images
 ![Prediction on Multiple Images](yolov8/demos/batch_images.jpg "Prediction on Multiple Images")
